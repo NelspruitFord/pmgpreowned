@@ -9,9 +9,9 @@ import { useState } from "react";
 
 const Listings = () => {
 
-   const [filter, setFilter] = useState("retail")
+   //const [filter, setFilter] = useState("retail")
 
-   const navStyle: string = "bg-slate-50 border-x border-r-black p-[10px]"
+   const navStyle = "bg-slate-50 border-x border-r-black p-[10px]"
 
    // const { data } = api.car.getAll.useQuery()
    const { data } = api.retailQuery.retailFilter.useQuery({filterType: "desc"})

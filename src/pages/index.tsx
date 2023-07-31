@@ -4,9 +4,9 @@ import { api } from "~/utils/api";
 
 export default function Home() {
 
-  const { data } = api.car.getAll.useQuery();
+  //const { data } = api.car.getAll.useQuery();
 
-  const navStyle: string = "border-x p-[10px]"
+  const navStyle = "border-x p-[10px]"
 
 
   return (
