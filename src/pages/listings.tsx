@@ -14,8 +14,7 @@ const Listings = () => {
    const navStyle = "bg-slate-50 border-x border-r-black p-[10px]"
 
    // const { data } = api.car.getAll.useQuery()
-   const { data } = api.retailQuery.retailFilter.useQuery({filterType: "desc"})
-   console.log(data)
+   const { data } = api.retailQuery.retailFilter.useQuery({ filterType: "desc" })
 
    if (!data) return (
       <>
@@ -88,10 +87,41 @@ const Listings = () => {
          </header>
          <main>
             <div className="flex min-h-screen bg-[#0009B4]">
-               <div className="flex justify-center w-0 md:w-2/12 min-h-screen text-black bg-white">
-                  <p className="text-[#0009b4] md:text-black">Sort listings:</p>
+
+               <div className="pt-3 pl-2 items-center justify-center w-0 md:w-[12%] min-h-screen bg-white">
+                  {/*  */}
+                  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                     <thead className="text-lg text-gray-900 uppercase dark:text-gray-400">
+                        <th className="pb-2">
+                           Sort Listings:
+                        </th>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <input type="radio" name="filter" /> Price: Low to High
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <input type="radio" name="filter" /> Price: High to Low
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <input type="radio" name="filter" /> Mileage: Low to high
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <input type="radio" name="filter" /> Mileage: High to Low
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  {/*  */}
                </div>
-               <div className="flex justify-center text-white w-12/12 md:w-10/12 min-h-screen border-x border-white">
+               <div className="flex justify-center text-white w-[100%] md:w-[88%] min-h-screen border-x border-white">
                   <div>
                      <table>
                         <tr>
@@ -117,7 +147,7 @@ const Listings = () => {
                   </div>
                </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
          </main>
       </>
    )
