@@ -45,7 +45,7 @@ const Listings = () => {
                <div className="flex justify-center w-1/6 min-h-screen text-white bg-black">
                   Filter
                </div>
-               <div className="flex justify-center text-white w-4/6 min-h-screen border-x border-white">
+               <div className="flex justify-center text-white w-5/6 min-h-screen border-x border-white">
                   <div className="w-full">
                      <Loader />
                      <Loader />
@@ -56,16 +56,11 @@ const Listings = () => {
                      <Loader />
                   </div>
                </div>
-               <div className="flex justify-center w-1/6 min-h-screen text-white bg-black">
-                  Contact
-               </div>
             </div>
             <Footer />
          </main>
       </>
    )
-
-
 
    return (
       <>
@@ -75,13 +70,13 @@ const Listings = () => {
             <link rel="icon" href="https://d2638j3z8ek976.cloudfront.net/e7f70f8f2924dd722584ce633c3c631404770d82/1680248095/images/logo.png" />
          </Head>
          <header>
-            <nav className="flex w-full items-center text-lg font-bold">
+            <nav className="flex w-full items-center text-lg font-bold border-b border-b-black">
                <Link href={"https://www.produktamotorgroup.co.za/"}>
                   <img
                      className={`${navStyle}`}
                      src='https://d2638j3z8ek976.cloudfront.net/e7f70f8f2924dd722584ce633c3c631404770d82/1680248095/images/logo.png'
                      alt="Whatsapp button logo"
-                     width={85}
+                     width={110}
                   />
                </Link>
                <Link href={"/"}
@@ -93,10 +88,10 @@ const Listings = () => {
          </header>
          <main>
             <div className="flex min-h-screen bg-[#0009B4]">
-               <div className="flex justify-center w-1/6 min-h-screen text-white bg-black">
-                  Filter
+               <div className="flex justify-center w-0 md:w-2/12 min-h-screen text-black bg-white">
+                  <p className="text-[#0009b4] md:text-black">Sort listings:</p>
                </div>
-               <div className="flex justify-center text-white w-4/6 min-h-screen border-x border-white">
+               <div className="flex justify-center text-white w-12/12 md:w-10/12 min-h-screen border-x border-white">
                   <div>
                      <table>
                         <tr>
@@ -120,9 +115,6 @@ const Listings = () => {
                         </tr>
                      </table>
                   </div>
-               </div>
-               <div className="flex justify-center w-1/6 min-h-screen text-white bg-black">
-                  Contact
                </div>
             </div>
             <Footer />
