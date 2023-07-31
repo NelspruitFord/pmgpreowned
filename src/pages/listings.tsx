@@ -5,7 +5,7 @@ import Loader from "~/components/loader";
 import Footer from "~/components/footer";
 
 import { api } from "~/utils/api";
-import { useState } from "react";
+//import { useState } from "react";
 
 const Listings = () => {
 
