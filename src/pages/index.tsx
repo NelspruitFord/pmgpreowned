@@ -55,7 +55,7 @@ const Listings = () => {
                            </td>
                         </tr>
                         <tr>
-                           <td className="h-[7px]" />
+                           <td className="h-[3px]" />
                         </tr>
                         <tr>
                            <td>
@@ -75,7 +75,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -85,7 +85,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -111,7 +111,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -137,7 +137,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -216,7 +216,7 @@ const Listings = () => {
                            </td>
                         </tr>
                         <tr>
-                           <td className="h-[7px]" />
+                           <td className="h-[3px]" />
                         </tr>
                         <tr>
                            <td>
@@ -238,7 +238,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -248,7 +248,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -276,7 +276,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
@@ -304,7 +304,7 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <td className="h-[7px]" />
+                              <td className="h-[3px]" />
                            </td>
                         </tr>
                         <tr>
