@@ -22,39 +22,92 @@ const Listings = () => {
             <link rel="icon" href="https://d2638j3z8ek976.cloudfront.net/e7f70f8f2924dd722584ce633c3c631404770d82/1680248095/images/logo.png" />
          </Head>
          <header>
-            <nav className="flex w-full items-center text-lg font-bold">
+            <nav className="flex w-full items-center text-lg font-bold border-b border-b-black">
                <Link href={"https://www.produktamotorgroup.co.za/"}>
                   <img
                      className={`${navStyle}`}
                      src='https://d2638j3z8ek976.cloudfront.net/e7f70f8f2924dd722584ce633c3c631404770d82/1680248095/images/logo.png'
-                     alt="Whatsapp button logo"
-                     width={85}
+                     alt="PMG logo"
+                     width={110}
                   />
                </Link>
                <Link href={"/about"}
                   className={`${navStyle}`}>
-                  <div className="p-1 rounded-full hover:underline decoration-[#da251C]">about</div>
+                  <div className="p-1 rounded-full hover:underline decoration-[#da251C]">About</div>
                </Link>
+               <h1 className="flex justify-center w-full underline decoration-black text-2xl">Pre Owned Vehicles</h1>
             </nav>
          </header>
          <main>
-            <div className="flex min-h-screen bg-[#0009B4]">
-               <div className="flex justify-center w-1/6 min-h-screen text-white bg-black">
-                  Filter
-               </div>
-               <div className="flex justify-center text-white w-5/6 min-h-screen border-x border-white">
-                  <div className="w-full">
-                     <Loader />
-                     <Loader />
-                     <Loader />
-                     <Loader />
-                     <Loader />
-                     <Loader />
-                     <Loader />
-                  </div>
+            <div className="flex min-h-max bg-[#0009B4]">
+
+               <div className="pt-3 pl-2 items-center justify-center w-0 md:w-[12%] min-h-screen bg-white">
+                  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                     <thead className="text-lg text-gray-900 uppercase dark:text-gray-400">
+                        <th className="pb-2">
+                           Sort Listings:
+                        </th>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td className="text-lg">
+                              Price:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="h-[10px]" />
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 High to Low
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 Low to high
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="text-lg">
+                              Mileage:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 Low to high
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 High to low
+                              </button>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
                </div>
             </div>
-            <Footer />
          </main>
       </>
    )
@@ -89,7 +142,6 @@ const Listings = () => {
             <div className="flex min-h-max bg-[#0009B4]">
 
                <div className="pt-3 pl-2 items-center justify-center w-0 md:w-[12%] min-h-screen bg-white">
-                  {/*  */}
                   <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                      <thead className="text-lg text-gray-900 uppercase dark:text-gray-400">
                         <th className="pb-2">
@@ -107,18 +159,25 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <input
-                                 id="ph2l" type="radio" name="filter"
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
                                  onClick={() => setFilterQuery("rdesc")}
-                              /> <label htmlFor="ph2l">High to Low</label>
+                              >
+                                 High to Low
+                              </button>
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <input
-                                 id="pl2h" type="radio" name="filter"
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
                                  onClick={() => setFilterQuery("rasc")}
-                              /> <label htmlFor="pl2h">Low to High</label>
+                              >
+                                 Low to high
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
                            </td>
                         </tr>
                         <tr>
@@ -128,23 +187,29 @@ const Listings = () => {
                         </tr>
                         <tr>
                            <td>
-                              <input
-                                 id="ml2h" type="radio" name="filter"
-                                 onClick={() => setFilterQuery("masc")}
-                              /> <label htmlFor="ml2h">Low to high</label>
+                              <td className="h-[10px]" />
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <input
-                                 id="mh2l" type="radio" name="filter"
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                                 onClick={() => setFilterQuery("masc")}
+                              >
+                                 Low to high
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
                                  onClick={() => setFilterQuery("mdesc")}
-                              /> <label htmlFor="mh2l">High to Low</label>
+                              >
+                                 High to low
+                              </button>
                            </td>
                         </tr>
                      </tbody>
                   </table>
-                  {/*  */}
                </div>
                <div className="flex justify-center text-white w-[100%] md:w-[88%] min-h-screen border-x border-white">
                   <div>
