@@ -12,7 +12,7 @@ const Listings = () => {
    const navStyle = "bg-slate-50 border-x border-r-black p-[10px]"
 
    const [filterQuery, setFilterQuery] = useState("pdesc")
-   const { data } = api.retailQuery.sortFilter.useQuery({ filterType: "pdesc" })
+   const { data } = api.retailQuery.sortFilter.useQuery({ filterType: filterQuery })
 
    if (!data) return (
       <>
@@ -74,7 +74,7 @@ const Listings = () => {
                   <img
                      className={`${navStyle}`}
                      src='https://d2638j3z8ek976.cloudfront.net/e7f70f8f2924dd722584ce633c3c631404770d82/1680248095/images/logo.png'
-                     alt="Whatsapp button logo"
+                     alt="PMG logo"
                      width={110}
                   />
                </Link>
@@ -109,7 +109,7 @@ const Listings = () => {
                            <td>
                               <input
                                  id="ph2l" type="radio" name="filter"
-                                 onClick={() => setFilterQuery("pdesc")}
+                                 onClick={() => setFilterQuery("rdesc")}
                               /> <label htmlFor="ph2l">High to Low</label>
                            </td>
                         </tr>
@@ -117,7 +117,7 @@ const Listings = () => {
                            <td>
                               <input
                                  id="pl2h" type="radio" name="filter"
-                                 onClick={() => setFilterQuery("pasc")}
+                                 onClick={() => setFilterQuery("rasc")}
                               /> <label htmlFor="pl2h">Low to High</label>
                            </td>
                         </tr>
@@ -130,7 +130,7 @@ const Listings = () => {
                            <td>
                               <input
                                  id="ml2h" type="radio" name="filter"
-                                 onClick={() => setFilterQuery("hdesc")}
+                                 onClick={() => setFilterQuery("mdasc")}
                               /> <label htmlFor="ml2h">Low to high</label>
                            </td>
                         </tr>
@@ -138,7 +138,7 @@ const Listings = () => {
                            <td>
                               <input
                                  id="mh2l" type="radio" name="filter"
-                                 onClick={() => setFilterQuery("hasc")}
+                                 onClick={() => setFilterQuery("mdesc")}
                               /> <label htmlFor="mh2l">High to Low</label>
                            </td>
                         </tr>
