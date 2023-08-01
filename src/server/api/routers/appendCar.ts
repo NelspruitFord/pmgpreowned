@@ -5,8 +5,8 @@ export const appendCarRouter = createTRPCRouter({
    appendCar: publicProcedure.input(z.object({
       image: z.string(),
       model: z.string(),
-      retail: z.string(),
-      mileage: z.string(),
+      retail: z.number(),
+      mileage: z.number(),
       features: z.string(),
    })).mutation(async ({ ctx, input }) => {
 

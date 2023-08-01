@@ -6,8 +6,8 @@ import { api } from "~/utils/api";
 const CreateTeamWizard = () => {
    const [imageURL, setImageURL] = useState("");
    const [modelName, setModelName] = useState("");
-   const [retail, setRetail] = useState("");
-   const [mileage, setMileage] = useState("");
+   const [retail, setRetail] = useState<number>();
+   const [mileage, setMileage] = useState<number>();
    const [features, setFeatures] = useState("");
 
    const [insertFlag, setInsertFlag] = useState(false);
@@ -55,14 +55,14 @@ const CreateTeamWizard = () => {
             <input className="bg-black shadow appearance-none border rounded ml-14 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                id="details"
                value={retail}
-               onChange={(e) => setRetail(e.target.value)}
+               onChange={(e) => setRetail(Number(e.target.value))}
             />
          </div>
          <div className="ml-1">Mileage:
             <input className="bg-black shadow appearance-none border rounded ml-10 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                id="details"
                value={mileage}
-               onChange={(e) => setMileage(e.target.value)}
+               onChange={(e) => setMileage(Number(e.target.value))}
             />
          </div>
 
@@ -78,6 +78,7 @@ const CreateTeamWizard = () => {
 
          <button
             onClick={() => {
+               if (retail && mileage)
                mutate({ image: imageURL, model: modelName, retail: retail, mileage: mileage, features: features })
                setInsertFlag(true)
             }}

@@ -5,12 +5,14 @@ import Loader from "~/components/loader";
 import Footer from "~/components/footer";
 
 import { api } from "~/utils/api";
+import { useState } from "react";
 
 const Listings = () => {
 
    const navStyle = "bg-slate-50 border-x border-r-black p-[10px]"
 
-   const { data } = api.retailQuery.retailFilter.useQuery({ filterType: "desc" })
+   const [filterQuery, setFilterQuery] = useState("")
+   const { data } = api.retailQuery.sortFilter.useQuery({ filterType: "rasc" })
 
    if (!data) return (
       <>
@@ -57,6 +59,8 @@ const Listings = () => {
       </>
    )
 
+   console.log(data.map(e => e))
+
    return (
       <>
          <Head>
@@ -94,23 +98,48 @@ const Listings = () => {
                      </thead>
                      <tbody>
                         <tr>
+                           <td className="text-lg">
+                              Price:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="h-[10px]" />
+                        </tr>
+                        <tr>
                            <td>
-                              <input type="radio" name="filter" /> Price: Low to High
+                              <input
+                                 id="ph2l" type="radio" name="filter"
+                                 onClick={() => setFilterQuery("pdesc")}
+                              /> <label htmlFor="ph2l">High to Low</label>
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <input type="radio" name="filter" /> Price: High to Low
+                              <input
+                                 id="pl2h" type="radio" name="filter"
+                                 onClick={() => setFilterQuery("pasc")}
+                              /> <label htmlFor="pl2h">Low to High</label>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="text-lg">
+                              Mileage:
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <input type="radio" name="filter" /> Mileage: Low to high
+                              <input
+                                 id="ml2h" type="radio" name="filter"
+                                 onClick={() => setFilterQuery("hdesc")}
+                              /> <label htmlFor="ml2h">Low to high</label>
                            </td>
                         </tr>
                         <tr>
                            <td>
-                              <input type="radio" name="filter" /> Mileage: High to Low
+                              <input
+                                 id="mh2l" type="radio" name="filter"
+                                 onClick={() => setFilterQuery("hasc")}
+                              /> <label htmlFor="mh2l">High to Low</label>
                            </td>
                         </tr>
                      </tbody>
