@@ -5,9 +5,12 @@ import { api } from "~/utils/api";
 
 const CreateTeamWizard = () => {
    const [imageURL, setImageURL] = useState("");
+   const [year, setYear] = useState<number>();
    const [modelName, setModelName] = useState("");
    const [retail, setRetail] = useState<number>();
    const [mileage, setMileage] = useState<number>();
+   const [fuel, setFuel] = useState("");
+   const [transmition, setTransmition] = useState("");
    const [features, setFeatures] = useState("");
 
    const [insertFlag, setInsertFlag] = useState(false);
@@ -35,15 +38,23 @@ const CreateTeamWizard = () => {
 
          <div className="ml-1">Image URL:
             <input className="bg-black shadow appearance-none border rounded ml-4 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               id="playerNames" type="text"
+               type="text"
                value={imageURL}
                onChange={(e) => setImageURL(e.target.value)}
             />
          </div>
 
+         <div className="ml-1">Year:
+            <input className="bg-black shadow appearance-none border rounded ml-4 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+               type="text"
+               value={year}
+               onChange={(e) => setYear(Number(e.target.value))}
+            />
+         </div>
+
          <div className="ml-1">Model:
             <input className="bg-black shadow appearance-none border rounded ml-12 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               id="TeamName" type="text"
+               type="text"
                value={modelName}
                onChange={(e) => setModelName(e.target.value)}
             />
@@ -53,14 +64,12 @@ const CreateTeamWizard = () => {
 
          <div className="ml-1">Retail:
             <input className="bg-black shadow appearance-none border rounded ml-14 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               id="details"
                value={retail}
                onChange={(e) => setRetail(Number(e.target.value))}
             />
          </div>
          <div className="ml-1">Mileage:
             <input className="bg-black shadow appearance-none border rounded ml-10 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               id="details"
                value={mileage}
                onChange={(e) => setMileage(Number(e.target.value))}
             />
@@ -68,7 +77,6 @@ const CreateTeamWizard = () => {
 
          <div className="ml-1">Features:
             <textarea className="bg-black shadow appearance-none border rounded ml-9 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               id="features"
                value={features}
                onChange={(e) => setFeatures(e.target.value)}
             />
@@ -79,7 +87,7 @@ const CreateTeamWizard = () => {
          <button
             onClick={() => {
                if (retail && mileage)
-               mutate({ image: imageURL, model: modelName, retail: retail, mileage: mileage, features: features })
+                  mutate({ image: imageURL, year: year, model: modelName, retail: retail, mileage: mileage, fuel: fuel, transmition: transmition, features: features })
                setInsertFlag(true)
             }}
 

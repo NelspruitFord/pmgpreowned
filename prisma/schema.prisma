@@ -12,15 +12,21 @@ datasource db {
 }
 
 model Car {
-  id       String @id @default(cuid())
-  image    String @db.VarChar(400)
-  model    String @db.VarChar(256)
-  retail   Float
-  mileage  Float
-  features String @db.VarChar(500)
+  id          String @id @default(cuid())
 
-  createdAt DateTime @default(now())
-  sold      Boolean
+  image       String @db.VarChar(400)
+  year        Float
+  model       String @db.VarChar(256)
+  retail      Float
+  mileage     Float
+  transmition String @db.VarChar(500)
+  fuel        String @db.VarChar(500)
+
+  features    String @db.VarChar(500)
+
+  createdAt   DateTime @default(now())
+
+  sold        Boolean
 }
 
 model CustomerRM {
