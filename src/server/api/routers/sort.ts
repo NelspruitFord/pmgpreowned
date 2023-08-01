@@ -34,6 +34,34 @@ export const sortRouter = createTRPCRouter({
       }
     })
 
+    if (input.filterType == "fasc") 
+    return ctx.prisma.car.findMany({
+      orderBy: {
+        fuel: "desc"
+      }
+    })
+
+    if (input.filterType == "fdesc") 
+    return ctx.prisma.car.findMany({
+      orderBy: {
+        fuel: "asc"
+      }
+    })
+
+    if (input.filterType == "tdesc") 
+    return ctx.prisma.car.findMany({
+      orderBy: {
+        mileage: "desc"
+      }
+    })
+
+    if (input.filterType == "tasc") 
+    return ctx.prisma.car.findMany({
+      orderBy: {
+        mileage: "asc"
+      }
+    })
+
     return (
       ctx.prisma.car.findMany()
     )

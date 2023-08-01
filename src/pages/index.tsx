@@ -104,6 +104,58 @@ const Listings = () => {
                               </button>
                            </td>
                         </tr>
+                        <tr>
+                           <td className="text-lg">
+                              Fuel:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 Diesel
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 Petrol
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="text-lg">
+                              Transmition:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 Auto
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              >
+                                 Manual
+                              </button>
+                           </td>
+                        </tr>
                      </tbody>
                   </table>
                </div>
@@ -111,8 +163,6 @@ const Listings = () => {
          </main>
       </>
    )
-
-   console.log(data.map(e => e))
 
    return (
       <>
@@ -205,6 +255,62 @@ const Listings = () => {
                                  onClick={() => setFilterQuery("mdesc")}
                               >
                                  High to low
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="text-lg">
+                              Fuel:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                                 onClick={() => setFilterQuery("fdesc")}
+                              >
+                                 Diesel
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                                 onClick={() => setFilterQuery("fasc")}
+                              >
+                                 Petrol
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td className="text-lg">
+                              Transmition:
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <td className="h-[10px]" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                                 onClick={() => setFilterQuery("tasc")}
+                              >
+                                 Auto
+                              </button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+                              onClick={() => setFilterQuery("tdesc")}
+                              >
+                                 Manual
                               </button>
                            </td>
                         </tr>
