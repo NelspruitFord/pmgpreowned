@@ -159,6 +159,18 @@ const Listings = () => {
                      </tbody>
                   </table>
                </div>
+               <div className="justify-center text-white w-[100%] md:w-[88%] min-h-screen border-x border-white bg-black">
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+                  <Loader/>
+               </div>
             </div>
          </main>
       </>
@@ -190,7 +202,6 @@ const Listings = () => {
          </header>
          <main>
             <div className="flex min-h-max bg-[#0009B4]">
-
                <div className="pt-3 pl-2 items-center justify-center w-0 md:w-[12%] min-h-screen bg-white">
                   <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                      <thead className="text-lg text-gray-900 uppercase dark:text-gray-400">
@@ -308,7 +319,7 @@ const Listings = () => {
                         <tr>
                            <td>
                               <button type="button" className="text-stone-800 dark:text-stone-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center mr-2 mb-2 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
-                              onClick={() => setFilterQuery("tdesc")}
+                                 onClick={() => setFilterQuery("tdesc")}
                               >
                                  Manual
                               </button>
