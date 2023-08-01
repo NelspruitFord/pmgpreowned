@@ -130,7 +130,7 @@ const Listings = () => {
                            <td>
                               <input
                                  id="ml2h" type="radio" name="filter"
-                                 onClick={() => setFilterQuery("mdasc")}
+                                 onClick={() => setFilterQuery("masc")}
                               /> <label htmlFor="ml2h">Low to high</label>
                            </td>
                         </tr>
