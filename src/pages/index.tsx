@@ -11,8 +11,8 @@ const Listings = () => {
 
    const navStyle = "bg-slate-50 border-x border-r-black p-[10px]"
 
-   const [filterQuery, setFilterQuery] = useState("")
-   const { data } = api.retailQuery.sortFilter.useQuery({ filterType: "rasc" })
+   const [filterQuery, setFilterQuery] = useState("pdesc")
+   const { data } = api.retailQuery.sortFilter.useQuery({ filterType: "pdesc" })
 
    if (!data) return (
       <>
@@ -157,10 +157,12 @@ const Listings = () => {
                                        className="border-solid border-4 border-slate-400"
                                        width={195}
                                     />
-                                    <div className="ml-3 overflow-auto h-36">
-                                       <h1 className="underline"><Link href={`https://wa.me/27763408289?text=I%27m%20interested%20in%20your%20${car.model}%20for%20sale`}>{car.model}</Link></h1>
+                                    <div className="ml-3 overflow-auto h-36 w-full">
+                                       <h1 className="underline"><Link href={`https://wa.me/27763408289?text=I%27m%20interested%20in%20your%20${car.year}%20${car.model}%20for%20sale`}>{car.year} {car.model}</Link></h1>
                                        <p className="mt-1">Retail: R {car.retail}</p>
                                        <p className="mt-1 mb-1">Mileage: {car.mileage} Km</p>
+                                       <p className="mt-1 mb-1">Transmition: {car.transmition}</p>
+                                       <p className="mt-1 mb-1">Fuel: {car.fuel}</p>
                                        <hr />
                                        <p className="mt-1">{car.features}</p>
                                     </div>

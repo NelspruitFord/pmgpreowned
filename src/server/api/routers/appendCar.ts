@@ -9,8 +9,8 @@ export const appendCarRouter = createTRPCRouter({
       model: z.string(),
       retail: z.number(),
       mileage: z.number(),
-      fuel: z.number(),
-      transmition: z.number(),
+      fuel: z.string(),
+      transmition: z.string(),
       features: z.string(),
    })).mutation(async ({ ctx, input }) => {
 

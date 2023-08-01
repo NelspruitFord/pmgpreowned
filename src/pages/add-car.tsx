@@ -38,7 +38,6 @@ const CreateTeamWizard = () => {
 
          <div className="ml-1">Image URL:
             <input className="bg-black shadow appearance-none border rounded ml-4 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               type="text"
                value={imageURL}
                onChange={(e) => setImageURL(e.target.value)}
             />
@@ -46,7 +45,6 @@ const CreateTeamWizard = () => {
 
          <div className="ml-1">Year:
             <input className="bg-black shadow appearance-none border rounded ml-4 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               type="text"
                value={year}
                onChange={(e) => setYear(Number(e.target.value))}
             />
@@ -54,7 +52,6 @@ const CreateTeamWizard = () => {
 
          <div className="ml-1">Model:
             <input className="bg-black shadow appearance-none border rounded ml-12 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-               type="text"
                value={modelName}
                onChange={(e) => setModelName(e.target.value)}
             />
@@ -75,6 +72,21 @@ const CreateTeamWizard = () => {
             />
          </div>
 
+         <div className="ml-1">Transmition:
+            <input className="bg-black shadow appearance-none border rounded ml-10 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+               value={transmition}
+               onChange={(e) => setTransmition(e.target.value)}
+            />
+         </div>
+
+         <div className="ml-1">Fuel:
+            <input className="bg-black shadow appearance-none border rounded ml-10 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+               value={fuel}
+               onChange={(e) => setFuel(e.target.value)}
+            />
+         </div>
+
+
          <div className="ml-1">Features:
             <textarea className="bg-black shadow appearance-none border rounded ml-9 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                value={features}
@@ -86,9 +98,10 @@ const CreateTeamWizard = () => {
 
          <button
             onClick={() => {
-               if (retail && mileage)
+               if (year && retail && mileage) {
                   mutate({ image: imageURL, year: year, model: modelName, retail: retail, mileage: mileage, fuel: fuel, transmition: transmition, features: features })
-               setInsertFlag(true)
+                  setInsertFlag(true)
+               }
             }}
 
             className="ml-1 bg-green-700 hover:bg-green-800 py-2 px-4 border border-lime-900 rounded">
