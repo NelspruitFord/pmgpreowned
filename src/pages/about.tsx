@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export default function Home() {
+const About = () => {
 
   const navStyle = "border-x p-[10px]"
 
@@ -40,3 +40,4 @@ export default function Home() {
     </>
   );
 }
+export default About;
