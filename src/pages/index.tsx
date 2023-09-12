@@ -205,7 +205,7 @@ const Home = () => {
                   className={`${navStyle}`}>
                   <div className="p-1 rounded-full hover:underline decoration-[#da251C]">About</div>
                </Link>
-               <h1 className="flex justify-center w-full underline decoration-black text-2xl">Pre Owned Vehicles</h1>
+               <h1 className="pl-10 flex w-full underline decoration-black text-2xl">Pre Owned Vehicles</h1>
                <div className="absolute right-0 mr-10" >
                   <table>
                      <tr>
